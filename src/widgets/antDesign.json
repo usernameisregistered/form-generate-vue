@@ -1,0 +1,30 @@
+[
+    {
+        "label": "布局控件",
+        "value": "layout",
+        "widgets": [
+
+        ]
+    },
+    {
+        "label": "表单控件",
+        "value": "form",
+        "widgets": [
+
+        ]
+    },
+    {
+        "label": "数据控件",
+        "value": "data",
+        "widgets": [
+
+        ]
+    },
+    {
+        "label": "其他控件",
+        "value": "other",
+        "widgets": [
+
+        ]
+    }
+]
