@@ -5,7 +5,7 @@
       <div class="item">
         <div class="label">选择UI主题</div>
         <div class="detail">
-          <select name="UITheme" @change="changeUI">
+          <select name="UITheme" @change="changeUI" placeholder="选择CSS预编译">
             <option
               v-for="item in UIList"
               :key="item"
@@ -20,7 +20,7 @@
       <div class="item">
         <div class="label">选择CSS预编译</div>
         <div class="detail">
-          <select name="UITheme" @change="changeCSSLang">
+          <select name="UITheme" @change="changeCSSLang" placeholder="选择CSS预编译">
             <option
               v-for="item in cssModuleList"
               :key="item"
@@ -64,6 +64,7 @@ export default {
       this.changeTheme(e.target.value);
     },
     jumpto(){
+      this.$router.replace({path: "/generateLayout"});
     }
   },
 };
