@@ -1,6 +1,5 @@
 <template>
   <div class="configContainer">
-    <common-header></common-header>
     <div class="content">
       <div class="item">
         <div class="label">选择UI主题</div>
@@ -39,13 +38,10 @@
   </div>
 </template>
 <script>
-import CommonHeader from "../components/commonHeader.vue";
 import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "config",
-  components: {
-    CommonHeader,
-  },
+
   computed: {
     ...mapGetters(["cssModule", "UITheme"]),
   },

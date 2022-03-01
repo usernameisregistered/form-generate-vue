@@ -3,10 +3,9 @@
     <span class="title">Form Generate</span>
     <div class="btnGroup">
       <span class="btn primary" @click="addUI">导入主题</span>
-      <span class="btn primary" @click="create">新建页面</span>
-      <span class="btn primary" @click="preview">预览页面</span>
-      <span class="btn primary" @click="generate">生成文件</span>
-      <span class="btn primary" @click="viewJSON">查看JSON</span>
+      <span class="btn primary" @click="preview">预览</span>
+      <span class="btn primary" @click="generate">生成</span>
+      <span class="btn primary" @click="view">查看</span>
       <span class="btn warn" @click="clearWidgets">清空组件</span>
     </div>
   </div>
@@ -15,12 +14,15 @@
 export default {
   name: "common-header",
   methods: {
-    create() {},
-    preview() {},
-    generate() {},
+    preview() {
+       this.$router.push({path: "/previewPage"})
+    },
+    generate() {
+      this.$router.push({path: "/generatePage"})
+    },
     clearWidgets() {},
     addUI() {},
-    viewJSON() {},
+    view() {},
   },
 };
 </script>
