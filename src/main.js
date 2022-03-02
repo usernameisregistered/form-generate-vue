@@ -3,7 +3,7 @@ import router from "./router/index"
 import store from "./vuex/index"
 import App from "./App.vue"
 import './assets/style/reset.css'
-
+import "./assets/style/uiBase.scss"
 import 'ant-design-vue/dist/antd.css';
 import Antd from 'ant-design-vue';
 Vue.use(Antd);
