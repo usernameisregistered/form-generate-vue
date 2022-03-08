@@ -10,5 +10,8 @@ export default {
     },
     changeCSSModule(state, value) {
         state.cssModule = value;
+    },
+    changeWidget(state, value = null){
+        state.selectWidget = value;
     }
 }

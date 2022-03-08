@@ -12,37 +12,37 @@
       @add="deepClone"
     >
       <div class="drag-move">
-        <div v-for="item,index in list" :key="index" >{{item}}</div>
+        <div v-for="item in list" :key="item.key">
+          <render-components
+            :tagName="item.tagName"
+            :attrs="item"
+          ></render-components>
+        </div>
       </div>
     </draggable>
   </div>
 </template>
 <script>
 import draggable from "vuedraggable";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
+import RenderComponents from "../../components/renderComponents.vue";
 export default {
-  name: "left-widget",
-  components: { draggable },
+  name: "CenterView",
+  components: { draggable, RenderComponents },
   data() {
     return {
       list: [],
+      selectWidget: null,
     };
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
+    ...mapMutations(["changeWidget"]),
     deepClone(e) {
-      const dragId = e.item.dataset.dragId.split("_");
-      const dragItem = this.widgetsList[dragId[0]].filter(
-        (el) => el.name === dragId.slice(1).join("_")
-      )[0];
-      this.list.push(dragItem.componentName.toString())
-      this.list = this.list.filter(el => typeof el === 'string')
-      console.log(this.list)
+      this.changeWidget(this.list.slice(-1)[0]);
     },
     createVueComponent(componentName) {
-      const componentCtr =
-        this.$root.$options.components[componentName];
+      const componentCtr = this.$root.$options.components[componentName];
       const tempComponent = new componentCtr({
         propsData: {
           type: "primary",
@@ -50,8 +50,8 @@ export default {
       });
       tempComponent.$slots.default =
         "默认按钮" + Math.random().toString().slice(2, 4);
-      tempComponent.$mount()
-      return tempComponent.$el.outerHTML
+      tempComponent.$mount();
+      return tempComponent.$el.outerHTML;
     },
   },
   computed: {

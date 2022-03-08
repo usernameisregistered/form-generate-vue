@@ -15,6 +15,7 @@
 import LeftWidget from "./leftWidget.vue";
 import CenterView from "./centerView.vue";
 import RightProp from "./rightProp.vue";
+import { mapMutations } from 'vuex';
 export default {
   name: "layoutPage",
   components: {
@@ -22,6 +23,13 @@ export default {
     CenterView,
     RightProp,
   },
+  beforeMount(){
+    this.changeTheme("antDesign");
+    this.changeCSSModule("scss")
+  },
+  methods:{
+    ...mapMutations(["changeTheme", "changeCSSModule"])
+  }
 };
 </script>
 <style lang="scss" scoped>

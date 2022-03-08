@@ -9,6 +9,12 @@
           </div>
         </div>
         <div class="fg-form-item">
+          <label class="fg-form-item__label">主题地址</label>
+          <div class="fg-form-item__content">
+            <input type="text" class="fg-input" v-model="form.url" />
+          </div>
+        </div>
+        <div class="fg-form-item">
           <label class="fg-form-item__label">选择文件</label>
           <div class="fg-form-item__content">
             <vue-file-upload class="fg-upload">
@@ -34,7 +40,7 @@ export default {
     return {
       form: {
         name: "",
-        id: "",
+        url: ""
       },
     };
   },
