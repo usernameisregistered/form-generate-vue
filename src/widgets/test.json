@@ -1,0 +1,99 @@
+[
+    {
+        "label": "布局控件",
+        "value": "layout",
+        "widgets": [
+            {
+                "label": "按钮",
+                "value": "button",
+                "tagName": "AButton",
+                "props": [
+                    {
+                        "name": "disabled",
+                        "desc": "按钮失效状态",
+                        "type": "boolean",
+                        "default": false
+                    },
+                    {
+                        "name": "ghost",
+                        "desc": "幽灵属性，使按钮背景透明",
+                        "type": "boolean",
+                        "default": false
+                    },
+                    {
+                        "name": "loading",
+                        "desc": "设置按钮载入状态",
+                        "type": "boolean",
+                        "default": false
+                    },
+                    {
+                        "name": "htmlType",
+                        "desc": "按钮失效状态",
+                        "type": "string",
+                        "default": "button"
+                    },
+                    {
+                        "name": "icon",
+                        "desc": "设置按钮的图标类型",
+                        "type": "string",
+                        "default": ""
+                    },
+                    {
+                        "name": "shape",
+                        "desc": "设置按钮形状",
+                        "type": "select",
+                        "default": "",
+                        "options": [
+                            "circle",
+                            "round"
+                        ]
+                    },
+                    {
+                        "name": "size",
+                        "desc": "设置按钮大小",
+                        "type": "select",
+                        "default": "",
+                        "options": [
+                            "small",
+                            "large"
+                        ]
+                    },
+                    {
+                        "name": "type",
+                        "desc": "设置按钮类型",
+                        "type": "select",
+                        "default": "",
+                        "options": [
+                            "primary",
+                            "dashed",
+                            "danger",
+                            "link"
+                        ]
+                    },
+                    {
+                        "name": "block",
+                        "desc": "将按钮宽度调整为其父宽度的选项",
+                        "type": "boolean",
+                        "default": false
+                    }
+                ],
+                "slots": ["default"]
+            }
+        ]
+    },
+    {
+        "label": "表单控件",
+        "value": "form",
+        "widgets": []
+    },
+    {
+        "label": "数据控件",
+        "value": "data",
+        "widgets": []
+    },
+    {
+        "label": "其他控件",
+        "value": "other",
+        "widgets": []
+    }
+]

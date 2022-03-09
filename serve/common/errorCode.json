@@ -1,0 +1,17 @@
+[
+    {
+        "code": 0,
+        "message": "成功",
+        "data": null
+    },
+    {
+        "code": 1,
+        "message": "失败",
+        "data": null
+    },
+    {
+        "code": -1,
+        "message": "尚未实现",
+        "data": null
+    }
+]
